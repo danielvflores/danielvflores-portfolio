@@ -1,10 +1,12 @@
 ---
 
+import { BASE_URL } from '../config.js';
+
 const links = [
-  { name: "Home", href: "/danielvflores-portfolio/#" },
-  { name: "About", href: "/danielvflores-portfolio/about" },
-  { name: "Projects", href: "/danielvflores-portfolio/projects" },
-  { name: "Contact", href: "/danielvflores-portfolio/contact" },
+  { name: "Home", href: `${BASE_URL}#` },
+  { name: "About", href: `${BASE_URL}about` },
+  { name: "Projects", href: `${BASE_URL}projects` },
+  { name: "Contact", href: `${BASE_URL}contact` },
 ];
 import "../styles/global.css";
 ---
