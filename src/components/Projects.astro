@@ -1,0 +1,45 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section id="projects" class="py-16 px-6 lg:px-24">
+  <!-- Profile Github -->
+  <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
+    <img
+      src="https://github.com/danielvflores.png"
+      alt="Foto de GitHub"
+      class="w-40 h-40 rounded-full object-cover shadow-lg"
+    />
+    <div class="max-w-2xl">
+      <h2 class="text-3xl font-bold mb-2">Hola, estás en el apartado de mis proyectos 👋</h2>
+      <p class="text-gray-600">
+        Soy un desarrollador apasionado por el backend y sistemas eficientes. Me encanta trabajar con Node.js, Java y arquitecturas limpias.
+      </p>
+      <a
+        href="https://github.com/danielvflores"
+        class="text-blue-600 hover:underline mt-2 inline-block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ver perfil completo en GitHub →
+      </a>
+    </div>
+  </div>
+
+  <!-- Projects RoadMap -->
+  <div class="grid gap-6 md:grid-cols-2">
+    <ProjectCard
+      title="mc-discord-ws"
+      description="Un sistema de conexión entre Minecraft y Discord. Un sistema simple que conecta los chats entre MC y DC."
+      techs={["TypeScript", "Java", "Express", "Cors", "WebSocket"]}
+      repoUrl="https://github.com/danielvflores/mc-discord-ws"
+    />
+    <ProjectCard
+      title="Type-Bot"
+      description="Un Simple bot múltiproposito creado únicamente con TypeScript de forma nativa."
+      techs={["TypeScript", "DiscordX", "MongoDB"]}
+      repoUrl="https://github.com/danielvflores/Type-Bot"
+    />
+    
+  </div>
+</section>

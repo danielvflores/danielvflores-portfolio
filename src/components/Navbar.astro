@@ -1,0 +1,64 @@
+---
+const links = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+];
+import "../styles/global.css";
+---
+
+<nav class="bg-white shadow-lg">
+  <div class="max-w-screen-xl mx-auto px-4 py-4 mt-24 flex justify-between items-center">
+    <!-- Profile -->
+    <a 
+      href="https://github.com/danielvflores" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="flex items-center space-x-2">
+      <img 
+        src="https://github.com/danielvflores.png" 
+        alt="GitHub profile picture" 
+        class="w-10 h-10 rounded-full object-cover"
+      />
+      <div>
+        <div class="text-black font-bold text-xl">Daniel Flores Viera</div>
+        <div class="text-gray-500 text-sm px-10">
+          Backend Dev
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop menu -->
+    <ul class="hidden md:flex space-x-6 text-sm text-gray-700">
+      {links.map(link => (
+        <li class="nav-link-fade"><a href={link.href}>{link.name}</a></li>
+      ))}
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button 
+      class="md:hidden focus:outline-none"
+      onclick="toggleMenu()"
+    >
+      <svg class="w-6 h-6 text-gray-700 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu (animated) -->
+  <div 
+    id="mobile-menu" 
+    class="md:hidden hidden opacity-0 transform scale-95 transition-all duration-300 px-4 pb-4"
+  >
+    <ul class="space-y-2 text-sm text-gray-700">
+      {links.map(link => (
+        <li><a href={link.href} class="block py-2 nav-link-fade">{link.name}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <script src="../scripts//toggleMenu.js"></script>
+
+</nav>
