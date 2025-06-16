@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.3"
+    "astro": "^5.9.3",
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",

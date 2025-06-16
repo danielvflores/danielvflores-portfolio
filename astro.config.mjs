@@ -1,9 +1,10 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import dotenv from 'dotenv';
 
-// https://astro.build/config
+dotenv.config();
+
 export default defineConfig({
-    site: 'https://danielvflores.github.io',
-    base: '/danielvflores-portfolio/',
-    trailingSlash: 'always'
+  site: process.env.PUBLIC_SITE || 'https://default-site.com',
+  base: process.env.PUBLIC_BASE_URL || '/',
+  trailingSlash: 'always',
 });
