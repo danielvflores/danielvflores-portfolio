@@ -2,22 +2,28 @@
 import ProjectCard from "./ProjectCard.astro";
 ---
 
-<section id="projects" class="py-16 px-6 lg:px-24">
+<section id="projects" class="py-8 lg:py-16 px-4 sm:px-6 lg:px-24">
   <!-- Profile Github -->
-  <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
+  <div class="flex flex-col items-center gap-6 mb-12 text-center">
     <img
       src="https://github.com/danielvflores.png"
       alt="Foto de GitHub"
-      class="w-40 h-40 rounded-full object-cover shadow-lg"
+      class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-lg"
     />
     <div class="max-w-2xl">
-      <h2 class="text-3xl font-bold mb-2">Hola, estás en el apartado de mis proyectos 👋</h2>
-      <p class="text-gray-600">
-        Soy un desarrollador apasionado por el backend y sistemas eficientes. Me encanta trabajar con Node.js, Java y arquitecturas limpias.
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">
+        Hola, estás en el apartado de mis proyectos 👋
+      </h2>
+      <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+        Desarrollador backend especializado en Node.js, TypeScript y Java. Mi
+        enfoque está en crear sistemas eficientes y bien estructurados. Como
+        Trainee en constante crecimiento, cada proyecto es una oportunidad para
+        aplicar mejores prácticas y arquitecturas sólidas que voy aprendiendo
+        con el tiempo.
       </p>
       <a
         href="https://github.com/danielvflores"
-        class="text-blue-600 hover:underline mt-2 inline-block"
+        class="text-blue-600 hover:underline text-sm sm:text-base inline-block"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -27,7 +33,26 @@ import ProjectCard from "./ProjectCard.astro";
   </div>
 
   <!-- Projects RoadMap -->
-  <div class="grid gap-6 md:grid-cols-2">
+  <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+    <ProjectCard
+      title="SGuard API"
+      description="Backend RESTful para SGuard, un bot de Discord de seguridad y moderación. Sistema completo con OAuth2, dashboard web y despliegue en la nube como alternativa gratuita a D-Safe."
+      techs={["TypeScript", "Express", "MongoDB", "Astro", "OAuth2", "Railway"]}
+      repoUrl="https://github.com/danielvflores/sguard-api"
+    />
+    <ProjectCard
+      title="System Token Plugin (STP)"
+      description="Plugin completo de Spigot 1.8.8 para servidores de prisión. Sistema de economía basado en tokens, encantamientos personalizados con NBT, GUI configurable y soporte PlaceholderAPI."
+      techs={[
+        "Java 8",
+        "Spigot API",
+        "SQLite",
+        "NBT",
+        "PlaceholderAPI",
+        "Maven",
+      ]}
+      repoUrl="https://github.com/danielvflores/system-token-plugin"
+    />
     <ProjectCard
       title="mc-discord-ws"
       description="Un sistema de conexión entre Minecraft y Discord. Un sistema simple que conecta los chats entre MC y DC."
@@ -40,6 +65,5 @@ import ProjectCard from "./ProjectCard.astro";
       techs={["TypeScript", "DiscordX", "MongoDB"]}
       repoUrl="https://github.com/danielvflores/Type-Bot"
     />
-    
   </div>
 </section>

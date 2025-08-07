@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npx astro build",
-    "build:vercel": "astro build",
+    "build": "node build.mjs",
+    "build:direct": "node node_modules/astro/dist/cli/index.js build",
     "preview": "astro preview",
     "astro": "astro"
   },

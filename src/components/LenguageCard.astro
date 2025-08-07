@@ -12,16 +12,22 @@ const { title, description, imageUrl, imageAlt } = Astro.props;
 <div class="
     border border-gray-300 bg-white p-4 rounded-lg shadow-sm
     hover:shadow-lg transition-all duration-300 transform hover:scale-105
-    flex flex-col items-center justify-between text-center
-    h-64 w-48 sm:w-52 md:w-56 lg:w-60 xl:w-64
-    flex-shrink-0
+    flex flex-col text-center
+    w-full max-w-sm mx-auto
+    min-h-fit
   ">
+  <!-- Icon -->
   <div class="flex items-center justify-center mb-3">
     <div class="w-16 h-16 overflow-hidden rounded-md flex items-center justify-center">
       <img src={imageUrl} alt={imageAlt} class="max-w-full max-h-full object-contain" />
     </div>
   </div>
-  <p class="text-gray-700 text-sm flex-grow overflow-hidden line-clamp-4">
+  
+  <!-- Title -->
+  <h4 class="text-lg font-semibold mb-3 text-gray-800">{title}</h4>
+  
+  <!-- Description -->
+  <p class="text-gray-600 text-sm leading-relaxed">
     {description}
   </p>
 </div>

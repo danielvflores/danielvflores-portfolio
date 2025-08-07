@@ -12,7 +12,7 @@ import "../styles/global.css";
 ---
 
 <nav class="bg-white shadow-lg">
-  <div class="max-w-screen-xl mx-auto px-4 py-4 mt-24 flex justify-between items-center">
+  <div class="max-w-screen-xl mx-auto px-4 py-4 mt-8 sm:mt-16 lg:mt-24 flex justify-between items-center">
     <!-- Profile -->
     <a 
       href="https://github.com/danielvflores" 
@@ -22,11 +22,11 @@ import "../styles/global.css";
       <img 
         src="https://github.com/danielvflores.png" 
         alt="GitHub profile picture" 
-        class="w-10 h-10 rounded-full object-cover"
+        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
       />
-      <div>
-        <div class="text-black font-bold text-xl">Daniel Flores Viera</div>
-        <div class="text-gray-500 text-sm px-10">
+      <div class="hidden sm:block">
+        <div class="text-black font-bold text-lg sm:text-xl">Daniel Flores Viera</div>
+        <div class="text-gray-500 text-xs sm:text-sm">
           Backend Dev
         </div>
       </div>
@@ -41,10 +41,10 @@ import "../styles/global.css";
 
     <!-- Mobile menu button -->
     <button 
-      class="md:hidden focus:outline-none"
+      class="md:hidden focus:outline-none p-2"
       onclick="toggleMenu()"
     >
-      <svg class="w-6 h-6 text-gray-700 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
@@ -53,11 +53,11 @@ import "../styles/global.css";
   <!-- Mobile menu (animated) -->
   <div 
     id="mobile-menu" 
-    class="md:hidden hidden opacity-0 transform scale-95 transition-all duration-300 px-4 pb-4"
+    class="md:hidden hidden opacity-0 transform scale-95 transition-all duration-300 px-4 pb-4 bg-white shadow-lg"
   >
-    <ul class="space-y-2 text-sm text-gray-700">
+    <ul class="space-y-3 text-sm text-gray-700">
       {links.map(link => (
-        <li><a href={link.href} class="block py-2 nav-link-fade">{link.name}</a></li>
+        <li><a href={link.href} class="block py-3 px-4 nav-link-fade hover:bg-gray-50 rounded-md transition-colors">{link.name}</a></li>
       ))}
     </ul>
   </div>
