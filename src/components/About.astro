@@ -17,8 +17,14 @@ import { BASE_URL, SITE } from "../config.js";
     <img
       src=`${SITE}/${BASE_URL}/images/about_image_phie.JPEG`
       alt="Foto Daniel Flores Viera"
-      class="w-full h-full object-cover object-center"
+      class="w-full h-full object-cover object-center select-none pointer-events-none"
+      draggable="false"
+      oncontextmenu="return false;"
+      ondragstart="return false;"
+      onselectstart="return false;"
+      onmousedown="return false;"
     />
+    <div class="absolute inset-0 z-10 select-none pointer-events-auto" style="background: transparent;"></div>
   </div>
 
   <!-- Text BOTTOM/LEFT -->
@@ -97,3 +103,33 @@ import { BASE_URL, SITE } from "../config.js";
   const aboutTitleWords = ["Backend", "Discord", "Minecraft"];
   startTypingEffect(aboutTitleWords);
 </script>
+
+<style>
+  /* Protección específica para la imagen de perfil */
+  img[alt="Foto Daniel Flores Viera"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+  }
+  
+  /* Desactivar menú contextual en el contenedor de la imagen */
+  img[alt="Foto Daniel Flores Viera"]::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  /* Protección adicional contra selección */
+  img[alt="Foto Daniel Flores Viera"]::selection {
+    background: transparent;
+  }
+  
+  img[alt="Foto Daniel Flores Viera"]::-moz-selection {
+    background: transparent;
+  }
+</style>
