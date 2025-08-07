@@ -1,2 +1,2 @@
-export const SITE = 'https://danielvflores.github.io';
-export const BASE_URL = '/danielvflores-portfolio/';
+export const SITE = 'https://danielvflores-portfolio.vercel.app';
+export const BASE_URL = '/';
