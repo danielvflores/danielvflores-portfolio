@@ -5,6 +5,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/line-clamp'), // ¡Esta línea es crucial!
+    // @tailwindcss/line-clamp ya está incluido por defecto en Tailwind CSS v3.3+
   ],
 };
