@@ -2,9 +2,13 @@
   "name": "danielvflores-portfolio",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npx astro build",
+    "build:vercel": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
