@@ -1,5 +1,6 @@
 ---
 import Social from "./Social.astro";
+import CVButton from "./CVButton.astro";
 import LenguageCard from "./LenguageCard.astro";
 import "../styles/cursorAnimation.css";
 
@@ -15,7 +16,7 @@ import { BASE_URL, SITE } from "../config.js";
     class="w-32 h-32 sm:w-40 sm:h-40 lg:w-64 lg:h-64 rounded-full overflow-hidden relative shadow-lg order-1 lg:order-2 flex-shrink-0"
   >
     <img
-      src=`${SITE}/${BASE_URL}/images/about_image_phie.JPEG`
+      src=`/images/Daniel_Flores_Viera_Icon.JPEG`
       alt="Foto Daniel Flores Viera"
       class="w-full h-full object-cover object-center select-none pointer-events-none"
       draggable="false"
@@ -44,9 +45,10 @@ import { BASE_URL, SITE } from "../config.js";
       habilidades día a día. Me interesa especialmente la arquitectura de
       software enfocado en el Backend, el diseño de API y la gestión de bases de datos.
     </p>
-    <!-- Social Media Component -->
-    <div class="flex justify-center lg:justify-start">
+    <!-- Social Media Component + CV Button -->
+    <div class="flex flex-wrap gap-4 justify-center lg:justify-start items-center">
       <Social />
+      <CVButton />
     </div>
   </div>
 </section>
