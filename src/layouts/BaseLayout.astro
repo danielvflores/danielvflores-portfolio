@@ -3,28 +3,90 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { SITE } from "../config.js";
 
 export interface Props {
   title?: string;
   description?: string;
+  keywords?: string;
+  image?: string;
   showScrollToTop?: boolean;
+  canonical?: string;
 }
 
 const { 
-  title = "danielvflores - portfolio",
-  description = "Portfolio de Daniel Flores Viera - Desarrollador Backend especializado en Node.js, TypeScript y Java",
-  showScrollToTop = false
+  title = SITE.title,
+  description = SITE.description,
+  keywords = SITE.keywords,
+  image = SITE.image,
+  showScrollToTop = false,
+  canonical = Astro.url.pathname
 } = Astro.props;
+
+const canonicalURL = new URL(canonical, SITE.url);
+const imageURL = new URL(image, SITE.url);
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang={SITE.lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={SITE.author} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:locale" content={SITE.locale} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={imageURL} />
+    <meta property="twitter:creator" content={SITE.twitterHandle} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/Daniel_Flores_Viera_Icon.JPEG" />
+    
+    <!-- Sitemap & RSS -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Daniel Flores Viera",
+        "jobTitle": "Desarrollador Backend",
+        "description": "Desarrollador Backend especializado en Node.js, TypeScript, Java y Python",
+        "url": "https://danielvflores-portfolio.vercel.app",
+        "image": "https://danielvflores-portfolio.vercel.app/images/Daniel_Flores_Viera_Icon.JPEG",
+        "email": "danielvflores08@gmail.com",
+        "knowsAbout": ["Node.js", "TypeScript", "Java", "Python", "API REST", "Microservicios"],
+        "sameAs": [
+          "https://github.com/danielvflores",
+          "https://linkedin.com/in/danielvflores"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance Developer"
+        }
+      }
+    </script>
   </head>
   <body class="bg-white text-black">
     <div class="max-w-screen-xl mx-auto px-4">

@@ -1,9 +1,14 @@
 // Configuración del sitio
 export const SITE = {
   url: 'https://danielvflores-portfolio.vercel.app',
-  title: 'danielvflores - portfolio',
-  description: 'Portfolio de Daniel Flores Viera - Desarrollador Backend especializado en Node.js, TypeScript y Java',
-  author: 'Daniel Flores Viera'
+  title: 'Daniel Flores Viera | Desarrollador Backend Especialista',
+  description: 'Desarrollador Backend especializado en Node.js, TypeScript, Java y Python. Creador de APIs robustas y sistemas escalables. Portfolio con proyectos reales.',
+  author: 'Daniel Flores Viera',
+  keywords: 'desarrollador backend, nodejs, typescript, java, python, api rest, microservicios, portfolio desarrollador',
+  image: '/images/Daniel_Flores_Viera_Icon.JPEG',
+  twitterHandle: '@danielvflores',
+  lang: 'es',
+  locale: 'es_ES'
 };
 
 export const BASE_URL = '/';

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://danielvflores-portfolio.vercel.app/sitemap-index.xml
+
+# Disallow specific paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow important resources
+Allow: /images/
+Allow: /icons/
+Allow: /*.css$
+Allow: /*.js$
