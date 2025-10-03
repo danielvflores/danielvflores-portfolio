@@ -1,23 +1,44 @@
-# Astro Starter Kit: Minimal
+# Daniel Flores Viera - Desarrollador Backend
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Portfolio personal de Daniel Flores Viera, desarrollador backend especializado en Node.js, TypeScript, Java y Python.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+🌐 **Website**: https://danielvflores-portfolio.vercel.app
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tecnologías
+- Node.js & Express
+- TypeScript
+- Java & Spring Boot
+- Python
+- API REST & GraphQL
+- Microservicios
+- MongoDB & PostgreSQL
 
-## 🚀 Project Structure
+## 📫 Contacto
+- **Email**: danielvflores08@gmail.com
+- **GitHub**: https://github.com/danielvflores
+- **Portfolio**: https://danielvflores-portfolio.vercel.app
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🌟 Proyectos Destacados
 
-```text
-/
-├── public/
-├── src/
+### Writook Platform
+Plataforma completa de escritura colaborativa inspirada en Wattpad, desarrollada con arquitectura full-stack moderna.
+
+### SGuard API  
+Sistema backend robusto desarrollado con arquitectura RESTful para gestión de seguridad y moderación en Discord.
+
+### Parallel Nmap Port Scanner
+Herramienta avanzada de ciberseguridad para reconocimiento de redes con ejecución multi-hilo.
+
+### System Token Plugin (STP)
+Plugin empresarial para Minecraft desarrollado con Java 8 y arquitectura orientada a objetos.
+
+## �️ Stack Técnico
+- **Backend**: Node.js, Express.js, Spring Boot
+- **Frontend**: React, Astro, Tailwind CSS
+- **Bases de Datos**: MongoDB, PostgreSQL, SQLite
+- **DevOps**: Docker, Git, GitHub Actions
+- **Testing**: Jest, JUnit
+- **Otros**: RESTful APIs, Microservicios, Socket.io
 │   └── pages/
 │       └── index.astro
 └── package.json
