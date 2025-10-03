@@ -1,32 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
+<BaseLayout showScrollToTop={true}>
   <About />
   <Projects />
   <Contact />
-  <Footer />
-
-  <button
-    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-    aria-label="Ir arriba"
-    class="fixed bottom-6 right-6 bg-gray-800 text-white rounded-full w-12 h-12 flex items-center justify-center cursor-pointer shadow-lg hover:bg-gray-600 transition-colors z-50"
-  >
-    <svg
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      viewBox="0 0 24 24"
-      class="w-6 h-6"
-    >
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  </button>
-</Layout>
+</BaseLayout>

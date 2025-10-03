@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-link-fade {
-  @apply transition-opacity duration-300 hover:opacity-50;
+/* Componentes reutilizables */
+@layer components {
+  .nav-link-fade {
+    @apply transition-opacity duration-300 hover:opacity-50;
+  }
+  
+  .social-icon-base {
+    @apply group relative bg-gray-100 rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg;
+  }
+  
+  .social-icon-svg {
+    @apply w-5 h-5 text-gray-700 group-hover:text-white transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center px-3 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 hover:scale-105 hover:shadow-lg text-sm;
+  }
+}
+
+/* Utilitarios personalizados */
+@layer utilities {
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    pointer-events: none;
+  }
 }

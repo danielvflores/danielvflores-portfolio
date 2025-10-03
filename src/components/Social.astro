@@ -1,11 +1,11 @@
 ---
-
+import { SOCIAL_LINKS } from "../config.js";
 ---
 
 <div class="flex flex-wrap gap-3 items-center justify-center lg:justify-start">
   <!-- X/Twitter -->
   <a 
-    href="https://twitter.com/" 
+    href={SOCIAL_LINKS.twitter} 
     target="_blank" 
     rel="noopener noreferrer" 
     class="group relative bg-gray-100 hover:bg-black rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
@@ -18,7 +18,7 @@
 
   <!-- Instagram -->
   <a 
-    href="https://instagram.com/" 
+    href={SOCIAL_LINKS.instagram} 
     target="_blank" 
     rel="noopener noreferrer" 
     class="group relative bg-gray-100 hover:bg-gradient-to-r hover:from-purple-500 hover:via-pink-500 hover:to-orange-500 rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
@@ -31,7 +31,7 @@
 
   <!-- LinkedIn -->
   <a 
-    href="https://linkedin.com/in/" 
+    href={SOCIAL_LINKS.linkedin} 
     target="_blank" 
     rel="noopener noreferrer" 
     class="group relative bg-gray-100 hover:bg-blue-600 rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
@@ -44,7 +44,7 @@
 
   <!-- GitHub -->
   <a 
-    href="https://github.com/danielvflores" 
+    href={SOCIAL_LINKS.github} 
     target="_blank" 
     rel="noopener noreferrer" 
     class="group relative bg-gray-100 hover:bg-gray-900 rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
@@ -57,7 +57,7 @@
 
   <!-- Portfolio/Website -->
   <a 
-    href="https://danieldev.com" 
+    href={SOCIAL_LINKS.website} 
     target="_blank" 
     rel="noopener noreferrer" 
     class="group relative bg-gray-100 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"

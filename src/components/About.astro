@@ -4,7 +4,8 @@ import CVButton from "./CVButton.astro";
 import LenguageCard from "./LenguageCard.astro";
 import "../styles/cursorAnimation.css";
 
-import { BASE_URL, SITE } from "../config.js";
+import { BASE_URL, PERSONAL_INFO, SITE } from "../config.js";
+import { technologies } from "../data/projects.js";
 ---
 
 <section
@@ -16,14 +17,9 @@ import { BASE_URL, SITE } from "../config.js";
     class="w-32 h-32 sm:w-40 sm:h-40 lg:w-64 lg:h-64 rounded-full overflow-hidden relative shadow-lg order-1 lg:order-2 flex-shrink-0"
   >
     <img
-      src=`/images/Daniel_Flores_Viera_Icon.JPEG`
+      src={PERSONAL_INFO.profileImage}
       alt="Foto Daniel Flores Viera"
-      class="w-full h-full object-cover object-center select-none pointer-events-none"
-      draggable="false"
-      oncontextmenu="return false;"
-      ondragstart="return false;"
-      onselectstart="return false;"
-      onmousedown="return false;"
+      class="w-full h-full object-cover object-center no-select"
     />
     <div class="absolute inset-0 z-10 select-none pointer-events-auto" style="background: transparent;"></div>
   </div>
@@ -61,42 +57,14 @@ import { BASE_URL, SITE } from "../config.js";
   <div
     class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto"
   >
-    <LenguageCard
-      title="JavaScript"
-      description="Desarrollo aplicaciones con JavaScript ES6+, incluyendo bots de Discord y APIs REST. Manejo conceptos como asincronía, promesas y manejo de eventos para crear proyectos funcionales como mc-discord-ws y system-token-plugin."
-      imageUrl=`${SITE}/${BASE_URL}/icons/js-icon.png`
-      imageAlt="Logo de JavaScript"
-    />
-    <LenguageCard
-      title="TypeScript"
-      description="Especializado en TypeScript para proyectos robustos. He migrado proyectos de JavaScript a TypeScript, implementando tipado estricto en bots de Discord como type-bot y S-Guard, garantizando código más mantenible y con menos errores."
-      imageUrl=`${SITE}/${BASE_URL}/icons/ts-icon.png`
-      imageAlt="Logo de TypeScript"
-    />
-    <LenguageCard
-      title="Java"
-      description="Experiencia en desarrollo Java con Maven para gestión de dependencias. Manejo programación orientada a objetos, desarrollo de plugins y sistemas de backend. Familiarizado con APIs de Spigot y implementación de funcionalidades personalizadas."
-      imageUrl=`${SITE}/${BASE_URL}/icons/java-icon.png`
-      imageAlt="Logo de Java"
-    />
-    <LenguageCard
-      title="Python"
-      description="Desarrollo scripts de automatización y algoritmos en Python. Experiencia en manipulación de datos y automatización de procesos para optimizar tareas repetitivas en el desarrollo de proyectos."
-      imageUrl=`${SITE}/${BASE_URL}/icons/py-icon.png`
-      imageAlt="Logo de Python"
-    />
-    <LenguageCard
-      title="MongoDB"
-      description="Implementación de bases de datos NoSQL con MongoDB para persistencia de datos. Experiencia en modelado de datos JSON y operaciones CRUD para aplicaciones como bots de Discord y sistemas de economía en plugins de Minecraft."
-      imageUrl=`${SITE}/${BASE_URL}/icons/mongodb-icon.png`
-      imageAlt="Logo de MongoDB"
-    />
-    <LenguageCard
-      title="APIs & WebSockets"
-      description="Desarrollo de APIs REST y comunicación en tiempo real con WebSockets. Manejo de Express.js para backends, implementación de endpoints y sistemas de comunicación bidireccional entre diferentes plataformas y servicios."
-      imageUrl=`${SITE}/${BASE_URL}/icons/api-icon.png`
-      imageAlt="Logo de API"
-    />
+    {technologies.map(tech => (
+      <LenguageCard
+        title={tech.title}
+        description={tech.description}
+        imageUrl={tech.imageUrl}
+        imageAlt={tech.imageAlt}
+      />
+    ))}
   </div>
 </section>
 
@@ -106,29 +74,4 @@ import { BASE_URL, SITE } from "../config.js";
   startTypingEffect(aboutTitleWords);
 </script>
 
-<style>
-  img[alt="Foto Daniel Flores Viera"] {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-    pointer-events: none;
-  }
-  
-  img[alt="Foto Daniel Flores Viera"]::-webkit-media-controls {
-    display: none !important;
-  }
 
-  img[alt="Foto Daniel Flores Viera"]::selection {
-    background: transparent;
-  }
-  
-  img[alt="Foto Daniel Flores Viera"]::-moz-selection {
-    background: transparent;
-  }
-</style>
