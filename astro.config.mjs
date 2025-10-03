@@ -1,8 +1,27 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  // Configuración para Vercel con base URL correcta
+  site: 'https://danielvflores-portfolio.vercel.app',
   base: '/',
   trailingSlash: 'ignore',
-  output: 'static'
+  output: 'static',
+  
+  // SEO optimizations
+  compressHTML: true,
+  
+  // Sitemap generation
+  integrations: [
+    sitemap()
+  ],
+  
+  // Build optimizations
+  build: {
+    inlineStylesheets: 'auto'
+  },
+  
+  // Prefetch configuration
+  prefetch: {
+    prefetchAll: true
+  }
 });

@@ -10,11 +10,11 @@ const { title, description, imageUrl, imageAlt } = Astro.props;
 ---
 
 <div class="
-    border border-gray-300 bg-white p-4 rounded-lg shadow-sm
-    hover:shadow-lg transition-all duration-300 transform hover:scale-105
+    group relative border border-gray-300 bg-white p-4 rounded-lg shadow-sm
+    hover:shadow-xl transition-all duration-500 transform hover:scale-[1.02]
     flex flex-col text-center
     w-full max-w-sm mx-auto
-    min-h-fit
+    min-h-fit overflow-hidden
   ">
   <!-- Icon -->
   <div class="flex items-center justify-center mb-3">
@@ -30,4 +30,7 @@ const { title, description, imageUrl, imageAlt } = Astro.props;
   <p class="text-gray-600 text-sm leading-relaxed">
     {description}
   </p>
+
+  <!-- Hover effect overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-lg"></div>
 </div>

@@ -1,5 +1,7 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import { projects } from "../data/projects.js";
+import { SOCIAL_LINKS } from "../config.js";
 ---
 
 <section id="projects" class="py-8 lg:py-16 px-4 sm:px-6 lg:px-24">
@@ -22,7 +24,7 @@ import ProjectCard from "./ProjectCard.astro";
         con el tiempo.
       </p>
       <a
-        href="https://github.com/danielvflores"
+        href={SOCIAL_LINKS.github}
         class="text-blue-600 hover:underline text-sm sm:text-base inline-block"
         target="_blank"
         rel="noopener noreferrer"
@@ -32,38 +34,43 @@ import ProjectCard from "./ProjectCard.astro";
     </div>
   </div>
 
-  <!-- Projects RoadMap -->
-  <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
-    <ProjectCard
-      title="SGuard API"
-      description="Backend RESTful para SGuard, un bot de Discord de seguridad y moderación. Sistema completo con OAuth2, dashboard web y despliegue en la nube como alternativa gratuita a D-Safe."
-      techs={["TypeScript", "Express", "MongoDB", "Astro", "OAuth2", "Railway"]}
-      repoUrl="https://github.com/danielvflores/sguard-api"
-    />
-    <ProjectCard
-      title="System Token Plugin (STP)"
-      description="Plugin completo de Spigot 1.8.8 para servidores de prisión. Sistema de economía basado en tokens, encantamientos personalizados con NBT, GUI configurable y soporte PlaceholderAPI."
-      techs={[
-        "Java 8",
-        "Spigot API",
-        "SQLite",
-        "NBT",
-        "PlaceholderAPI",
-        "Maven",
-      ]}
-      repoUrl="https://github.com/danielvflores/system-token-plugin"
-    />
-    <ProjectCard
-      title="mc-discord-ws"
-      description="Un sistema de conexión entre Minecraft y Discord. Un sistema simple que conecta los chats entre MC y DC."
-      techs={["TypeScript", "Java", "Express", "Cors", "WebSocket"]}
-      repoUrl="https://github.com/danielvflores/mc-discord-ws"
-    />
-    <ProjectCard
-      title="Type-Bot"
-      description="Un Simple bot múltiproposito creado únicamente con TypeScript de forma nativa."
-      techs={["TypeScript", "DiscordX", "MongoDB"]}
-      repoUrl="https://github.com/danielvflores/Type-Bot"
-    />
+  <!-- Stats Section -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-12">
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-4 md:p-6 text-center border border-blue-100">
+      <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-1 md:mb-2">{projects.length}</div>
+      <div class="text-xs md:text-sm font-medium text-blue-800">Proyectos Completados</div>
+    </div>
+    <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-4 md:p-6 text-center border border-purple-100">
+      <div class="text-2xl md:text-3xl font-bold text-purple-600 mb-1 md:mb-2">8+</div>
+      <div class="text-xs md:text-sm font-medium text-purple-800">Tecnologías Dominadas</div>
+    </div>
+    <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-4 md:p-6 text-center border border-green-100">
+      <div class="text-2xl md:text-3xl font-bold text-green-600 mb-1 md:mb-2">100%</div>
+      <div class="text-xs md:text-sm font-medium text-green-800">Código Open Source</div>
+    </div>
+    <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-xl p-4 md:p-6 text-center border border-orange-100">
+      <div class="text-2xl md:text-3xl font-bold text-orange-600 mb-1 md:mb-2">1+</div>
+      <div class="text-xs md:text-sm font-medium text-orange-800">Años de Experiencia</div>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-6xl mx-auto justify-center">
+    {projects.map(project => (
+      <div class="flex justify-center">
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          techs={project.techs}
+          repoUrl={project.repoUrl}
+          featured={project.featured}
+          status={project.status}
+          type={project.type}
+          icon={project.icon}
+          gradient={project.gradient}
+          year={project.year}
+        />
+      </div>
+    ))}
   </div>
 </section>

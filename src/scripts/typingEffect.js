@@ -1,11 +1,30 @@
 
-export function startTypingEffect(words) {
+/**
+ * Efecto de escritura dinámica para elementos de texto
+ * @param {string[]} words - Array de palabras a mostrar
+ * @param {string} elementId - ID del elemento donde mostrar el texto
+ * @param {Object} options - Opciones de configuración
+ */
+export function startTypingEffect(words, elementId = "dynamic-word", options = {}) {
+  const {
+    typingSpeed = 150,
+    erasingSpeed = 75,
+    delayBetweenWords = 2000
+  } = options;
+
   let currentWordIndex = 0;
   let currentCharIndex = 0;
-  const typingSpeed = 150;
-  const erasingSpeed = 75;
-  const delayBetweenWords = 2000;
-  const el = document.getElementById("dynamic-word");
+  const el = document.getElementById(elementId);
+
+  if (!el) {
+    console.warn(`Elemento con ID "${elementId}" no encontrado`);
+    return;
+  }
+
+  if (!words || words.length === 0) {
+    console.warn('No se proporcionaron palabras para el efecto de tipeo');
+    return;
+  }
 
   function type() {
     if (currentCharIndex < words[currentWordIndex].length) {
@@ -28,5 +47,6 @@ export function startTypingEffect(words) {
     }
   }
 
+  // Inicializar el efecto
   type();
 }
