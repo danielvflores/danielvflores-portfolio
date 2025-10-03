@@ -12,7 +12,7 @@ export const BASE_URL = '/';
 export const PERSONAL_INFO = {
   name: 'Daniel Flores Viera',
   role: 'Backend Dev',
-  email: 'contact@danieldev.com',
+  email: 'danielvflores08@gmail.com',
   github: 'https://github.com/danielvflores',
   profileImage: '/images/Daniel_Flores_Viera_Icon.JPEG',
   cv: '/CV_DanielFloresViera_inf.pdf'
