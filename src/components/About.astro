@@ -102,12 +102,11 @@ import { BASE_URL, SITE } from "../config.js";
 
 <script>
   import { startTypingEffect } from "../scripts/typingEffect";
-  const aboutTitleWords = ["Backend", "Discord", "Minecraft"];
+  const aboutTitleWords = ["Backend"];
   startTypingEffect(aboutTitleWords);
 </script>
 
 <style>
-  /* Protección específica para la imagen de perfil */
   img[alt="Foto Daniel Flores Viera"] {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -121,12 +120,10 @@ import { BASE_URL, SITE } from "../config.js";
     pointer-events: none;
   }
   
-  /* Desactivar menú contextual en el contenedor de la imagen */
   img[alt="Foto Daniel Flores Viera"]::-webkit-media-controls {
     display: none !important;
   }
-  
-  /* Protección adicional contra selección */
+
   img[alt="Foto Daniel Flores Viera"]::selection {
     background: transparent;
   }
