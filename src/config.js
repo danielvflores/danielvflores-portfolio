@@ -1,6 +1,6 @@
 // Configuración del sitio
 export const SITE = {
-  url: 'https://danielvflores-portfolio.vercel.app',
+  url: 'https://portfolio.danielvflores.xyz/',
   title: 'Daniel Flores Viera | Desarrollador Backend Especialista',
   description: 'Desarrollador Backend especializado en Node.js, TypeScript, Java y Python. Creador de APIs robustas y sistemas escalables. Portfolio con proyectos reales.',
   author: 'Daniel Flores Viera',
@@ -29,5 +29,5 @@ export const SOCIAL_LINKS = {
   instagram: 'https://instagram.com/',
   linkedin: 'https://linkedin.com/in/',
   github: 'https://github.com/danielvflores',
-  website: 'https://danieldev.com'
+  website: 'https://danielvflores.xyz'
 };
