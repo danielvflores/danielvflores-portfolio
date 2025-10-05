@@ -26,8 +26,8 @@ export const PERSONAL_INFO = {
 // Enlaces de redes sociales
 export const SOCIAL_LINKS = {
   twitter: 'https://twitter.com/',
-  instagram: 'https://instagram.com/',
-  linkedin: 'https://linkedin.com/in/',
+  instagram: 'https://instagram.com/d.a.n.i.x.x',
+  linkedin: 'https://linkedin.com/in/danielvflores',
   github: 'https://github.com/danielvflores',
   website: 'https://danielvflores.xyz'
 };
