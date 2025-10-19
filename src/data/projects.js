@@ -14,14 +14,14 @@ export const projects = [
     year: "2025"
   },
   {
-    title: "SGuard API",
-    description: "Sistema backend robusto desarrollado con arquitectura RESTful para gestión de seguridad y moderación en Discord. Implementación completa con autenticación OAuth2, dashboard administrativo y despliegue escalable en infraestructura cloud como solución empresarial de moderación automatizada.",
-    techs: ["TypeScript", "Express.js", "MongoDB", "Astro", "OAuth2", "Railway", "REST API"],
-    repoUrl: "https://github.com/danielvflores/sguard-api",
+    title: "Sguard Project",
+    description: "Plataforma completa de seguridad y moderación para Discord desarrollada como monorepo. Incluye bot inteligente con análisis de contenido, API RESTful robusta con autenticación OAuth2, interfaz web moderna con dashboard administrativo, y código compartido optimizado. Solución empresarial escalable para automatización de moderación con arquitectura full-stack integrada.",
+    techs: ["TypeScript", "Node.js", "Discord.js", "DiscordX", "Express.js", "React", "Next.js", "PostgreSQL", "OAuth2", "Docker", "Monorepo", "REST API"],
+    repoUrl: "https://github.com/danielvflores/sguard-project",
     demoUrl: null,
     featured: false,
     status: "En desarrollo",
-    type: "backend",
+    type: "fullstack",
     icon: "🛡️",
     gradient: "from-blue-500 to-cyan-600",
     year: "2025"
