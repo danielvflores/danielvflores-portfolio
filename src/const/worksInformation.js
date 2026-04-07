@@ -24,10 +24,16 @@ export const technologies = [
     imageAlt: "Logo de Database"
   },
   {
-    title: "API Development",
-    description: "Desarrollo profesional de APIs RESTful siguiendo mejores prácticas de la industria. Implementación de sistemas de autenticación robustos, autorización granular, documentación técnica completa y arquitecturas de microservicios escalables.",
-    imageUrl: "/icons/api-icon.png",
-    imageAlt: "Logo de API Development"
+    title: "Herramientas Sysadmin",
+    description: "Administración de sistemas en entornos Linux. Experiencia con Docker, gestión de firewall (ufw), segmentación de redes y control de usuarios. Desarrollo de scripts para monitoreo de usuarios y procesos.",
+    imageUrl: "/icons/server-icon.png",
+    imageAlt: "Logo de Herramientas Sysadmin"
+  },
+  {
+    title: "Herramientas Ciberseguridad",
+    description: "Experiencia en herramientas de ciberseguridad para pentesting, utilizando Nmap, OWASP ZAP y sqlmap.",
+    imageUrl: "/icons/security-icon.png",
+    imageAlt: "Logo de Herramientas Ciberseguridad"
   }
 ];
 
