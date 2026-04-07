@@ -1,7 +1,7 @@
 // Configuración del sitio
 export const SITE = {
   url: "https://portfolio.danielvflores.xyz/",
-  title: "Daniel Flores Viera | Desarrollador Backend Especialista",
+  title: "Daniel Flores Viera | Desarrollador Backend Trainee - Sysadmin",
   description:
     "Desarrollador Backend especializado en Node.js, TypeScript, Java y Python. Creador de APIs robustas y sistemas escalables. Portfolio con proyectos reales.",
   author: "Daniel Flores Viera",
@@ -17,8 +17,8 @@ export const BASE_URL = "/";
 
 // Información personal
 export const PERSONAL_INFO = {
-  name: "Daniel Flores Viera",
-  role: "Backend Dev",
+  name: "Daniel Alonso Flores Viera",
+  role: "Backend Dev - Sysadmin",
   email: "danielvflores08@gmail.com",
   github: "https://github.com/danielvflores",
   profileImage: "/images/Daniel_Flores_Viera_Icon.JPEG",

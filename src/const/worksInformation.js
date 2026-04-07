@@ -1,4 +1,36 @@
-// src/data/projects.js
+export const technologies = [
+  {
+    title: "Java",
+    description: "Experiencia sólida en desarrollo Java junto con Maven para la gestión de dependencias. Dominio de programación orientada a objetos, desarrollo de APIs seguras e integración con Spring Framework.",
+    imageUrl: "/icons/java-icon.png",
+    imageAlt: "Logo de Java"
+  },
+  {
+    title: "TypeScript",
+    description: "Experiencia en TypeScript para desarrollo de aplicaciones web. Implementación de tipado estático estricto, interfaces bien planificadas y un enfoque en la calidad del código.",
+    imageUrl: "/icons/ts-icon.png",
+    imageAlt: "Logo de TypeScript"
+  },
+  {
+    title: "NodeJS",
+    description: "Conocimientos versátiles en NodeJS tanto para desarrollo backend como desarrollo frontend. Experiencia creando APIS RESTful, microservicios y bots de Discord.",
+    imageUrl: "/icons/nodejs-icon.png",
+    imageAlt: "Logo de NodeJS"
+  },
+  {
+    title: "Bases de Datos",
+    description: "Experiencia con gestores de bases de datos, tanto relacionales como no relacionales. Entre ellas se encuentran PostgreSQL, SQLite y MongoDB.",
+    imageUrl: "/icons/mongodb-icon.png",
+    imageAlt: "Logo de Database"
+  },
+  {
+    title: "API Development",
+    description: "Desarrollo profesional de APIs RESTful siguiendo mejores prácticas de la industria. Implementación de sistemas de autenticación robustos, autorización granular, documentación técnica completa y arquitecturas de microservicios escalables.",
+    imageUrl: "/icons/api-icon.png",
+    imageAlt: "Logo de API Development"
+  }
+];
+
 export const projects = [
   {
     title: "Writook Platform",
@@ -51,44 +83,5 @@ export const projects = [
     icon: "⚡",
     gradient: "from-green-500 to-emerald-600",
     year: "2025"
-  }
-];
-
-export const technologies = [
-  {
-    title: "JavaScript",
-    description: "Dominio avanzado de JavaScript ES6+ para desarrollo full-stack. Experiencia en programación asíncrona, manipulación del DOM, APIs modernas y desarrollo de aplicaciones escalables con patrones de diseño profesionales.",
-    imageUrl: "/icons/js-icon.png",
-    imageAlt: "Logo de JavaScript"
-  },
-  {
-    title: "TypeScript",
-    description: "Especialización en TypeScript para desarrollo de aplicaciones empresariales robustas. Implementación de tipado estático estricto, interfaces avanzadas y arquitecturas escalables que garantizan código mantenible y libre de errores en producción.",
-    imageUrl: "/icons/ts-icon.png",
-    imageAlt: "Logo de TypeScript"
-  },
-  {
-    title: "Java",
-    description: "Experiencia sólida en desarrollo Java empresarial con Maven para gestión de dependencias. Dominio de programación orientada a objetos, desarrollo de APIs robustas, integración con Spring Framework y implementación de soluciones backend escalables.",
-    imageUrl: "/icons/java-icon.png",
-    imageAlt: "Logo de Java"
-  },
-  {
-    title: "Python",
-    description: "Competencia en desarrollo Python para automatización de procesos, scripting avanzado y desarrollo backend. Experiencia en frameworks web, procesamiento de datos y implementación de soluciones eficientes para optimización de workflows empresariales.",
-    imageUrl: "/icons/py-icon.png",
-    imageAlt: "Logo de Python"
-  },
-  {
-    title: "Database Management",
-    description: "Experiencia integral en gestión de bases de datos relacionales y NoSQL (MongoDB, MySQL, SQLite). Especialización en modelado de datos eficiente, optimización de consultas, implementación de índices y arquitecturas de persistencia escalables.",
-    imageUrl: "/icons/mongodb-icon.png",
-    imageAlt: "Logo de Database"
-  },
-  {
-    title: "API Development",
-    description: "Desarrollo profesional de APIs RESTful siguiendo mejores prácticas de la industria. Implementación de sistemas de autenticación robustos, autorización granular, documentación técnica completa y arquitecturas de microservicios escalables.",
-    imageUrl: "/icons/api-icon.png",
-    imageAlt: "Logo de API Development"
   }
 ];

@@ -1,10 +1,4 @@
 
-/**
- * Efecto de escritura dinámica para elementos de texto
- * @param {string[]} words - Array de palabras a mostrar
- * @param {string} elementId - ID del elemento donde mostrar el texto
- * @param {Object} options - Opciones de configuración
- */
 export function startTypingEffect(words, elementId = "dynamic-word", options = {}) {
   const {
     typingSpeed = 150,
@@ -47,6 +41,5 @@ export function startTypingEffect(words, elementId = "dynamic-word", options = {
     }
   }
 
-  // Inicializar el efecto
   type();
 }
