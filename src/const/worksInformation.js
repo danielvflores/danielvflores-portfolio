@@ -40,54 +40,41 @@ export const technologies = [
 export const projects = [
   {
     title: "Writook Platform",
-    description: "Plataforma completa de escritura colaborativa inspirada en Wattpad, desarrollada con arquitectura full-stack moderna. Sistema integral que incluye autenticación JWT, gestión de historias, editor de capítulos con TinyMCE, sistema de comentarios y rating, con frontend React responsivo y backend Spring Boot robusto con API RESTful.",
+    description: "Plataforma fullstack de escritura inspirada en Wattpad. Sistema que incluye autenticación JWT, gestión de historias, editor de capítulos con TinyMCE, sistema de comentarios y rating, con frontend React y backend Spring Boot robusto con API RESTful.",
     techs: ["Java 21", "Spring Boot", "Maven", "React", "TinyMCE", "JWT", "REST API", "Tailwind CSS"],
     repoUrl: "https://github.com/danielvflores/Writook",
     demoUrl: "https://writook.danielvflores.xyz",
-    featured: true,
+    // featured: false, // Not used in the UI, but can be added if needed
     status: "En desarrollo",
     type: "fullstack",
     icon: "📚",
-    gradient: "from-purple-500 to-indigo-600",
-    year: "2025"
-  },
-  {
-    title: "Sguard Project",
-    description: "Plataforma completa de seguridad y moderación para Discord desarrollada como monorepo. Incluye bot inteligente con análisis de contenido, API RESTful robusta con autenticación OAuth2, interfaz web moderna con dashboard administrativo, y código compartido optimizado. Solución empresarial escalable para automatización de moderación con arquitectura full-stack integrada.",
-    techs: ["TypeScript", "Node.js", "Discord.js", "DiscordX", "Express.js", "React", "Next.js", "PostgreSQL", "OAuth2", "Docker", "Monorepo", "REST API"],
-    repoUrl: "https://github.com/danielvflores/sguard-project",
-    demoUrl: null,
-    featured: false,
-    status: "En desarrollo",
-    type: "fullstack",
-    icon: "🛡️",
-    gradient: "from-blue-500 to-cyan-600",
+    // gradient: "", // Not used in the UI, but can be added if needed
     year: "2025"
   },
   {
     title: "Parallel Nmap Port Scanner",
-    description: "Herramienta avanzada de ciberseguridad para reconocimiento de redes con ejecución multi-hilo. Scanner profesional con detección automática de privilegios, validación de entrada robusta, resolución DNS, logging detallado y opciones de escaneo personalizables para auditorías de seguridad y pentesting.",
+    description: "Herramienta de pentesting para reconocimiento de redes con ejecución en paralelo permitiendo escaneo eficiente en poco tiempo. Utiliza Python 3.6+ con módulos como Threading y Subprocess para facilitar los escaneos de puertos de Nmap.",
     techs: ["Python 3.6+", "Nmap", "Threading", "Subprocess", "Network Security", "Penetration Testing"],
     repoUrl: "https://github.com/danielvflores/nmap-port-mc-revision",
     demoUrl: null,
-    featured: false,
+    // featured: false, // Not used in the UI, but can be added if needed
     status: "Completado",
     type: "security",
     icon: "🔍",
-    gradient: "from-red-500 to-orange-600",
+    // gradient: "", // Not used in the UI, but can be added if needed
     year: "2025"
   },
   {
     title: "System Token Plugin (STP)",
-    description: "Plugin empresarial para Minecraft desarrollado con Java 8 y arquitectura orientada a objetos. Sistema completo de economía virtual con gestión de tokens, encantamientos personalizados mediante manipulación NBT, interfaces gráficas configurables y integración con PlaceholderAPI para servidores de alto rendimiento.",
+    description: "Plugin para Minecraft desarrollado con Java 8 y arquitectura orientada a objetos. Sistema de economía con gestión de tokens, encantamientos personalizados modificando NBT, interfaces gráficas configurables e integración con PlaceholderAPI para la llamada de variables externas al plugin.",
     techs: ["Java 8", "Spigot API", "SQLite", "NBT Manipulation", "PlaceholderAPI", "Maven"],
     demoUrl: null,
     repoUrl: "https://github.com/danielvflores/system-token-plugin",
-    featured: false,
+    // featured: false, // Not used in the UI, but can be added if needed
     status: "Completado",
     type: "plugin",
     icon: "⚡",
-    gradient: "from-green-500 to-emerald-600",
+    // gradient: "", // Not used in the UI, but can be added if needed
     year: "2025"
   }
 ];
