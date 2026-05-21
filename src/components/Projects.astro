@@ -36,20 +36,20 @@ import { SOCIAL_LINKS } from "../const/config";
 
   <!-- Stats Section -->
   <div class="max-w-4xl mx-auto mb-12">
-    <div class="flex justify-center gap-24 text-center">
-      <div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
+      <div class="px-2 py-1">
         <div class="text-2xl font-semibold text-gray-900">{projects.length}</div>
         <div class="text-sm text-gray-500">Proyectos</div>
       </div>
-      <div>
+      <div class="px-2 py-1">
         <div class="text-2xl font-semibold text-gray-900">8+</div>
         <div class="text-sm text-gray-500">Tecnologías</div>
       </div>
-      <div>
+      <div class="px-2 py-1">
         <div class="text-2xl font-semibold text-gray-900">100%</div>
         <div class="text-sm text-gray-500">Open Source</div>
       </div>
-      <div>
+      <div class="px-2 py-1">
         <div class="text-2xl font-semibold text-gray-900">2 años</div>
         <div class="text-sm text-gray-500">Experiencia</div>
       </div>
@@ -61,22 +61,20 @@ import { SOCIAL_LINKS } from "../const/config";
     Functions not used:
     - featured={project.featured}
    -->
-  <div class="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 max-w-6xl mx-auto justify-center">
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 2xl:grid-cols-3 max-w-6xl mx-auto items-stretch">
     {projects.map(project => (
-      <div class="flex justify-center">
-        <ProjectCard
-          title={project.title}
-          description={project.description}
-          techs={project.techs}
-          repoUrl={project.repoUrl}
-          demoUrl={project.demoUrl}
-          status={project.status}
-          type={project.type}
-          icon={project.icon}
-          gradient={project.gradient}
-          year={project.year}
-        />
-      </div>
+      <ProjectCard
+        title={project.title}
+        description={project.description}
+        techs={project.techs}
+        repoUrl={project.repoUrl}
+        demoUrl={project.demoUrl}
+        status={project.status}
+        type={project.type}
+        icon={project.icon}
+        gradient={"gradient" in project ? project.gradient : ""}
+        year={project.year}
+      />
     ))}
   </div>
 </section>
