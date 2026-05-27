@@ -18,7 +18,7 @@ import { technologies } from "../const/worksInformation.js";
   >
     <img
       src={PERSONAL_INFO.profileImage}
-      alt={`Foto de perfil de ${PERSONAL_INFO.name} - Desarrollador Backend`}
+      alt={`Foto de perfil de ${PERSONAL_INFO.name}`}
       class="w-full h-full object-cover object-center no-select"
       width="256"
       height="256"
@@ -30,19 +30,16 @@ import { technologies } from "../const/worksInformation.js";
   <!-- Text BOTTOM/LEFT -->
   <div class="flex-1 max-w-2xl text-center lg:text-left order-2 lg:order-1">
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
-      ¡Hola, mi nombre es Daniel! Soy un
+      ¡Hola, soy Daniel! Soy un
       <span id="dynamic-word" class="text-blue-600"></span><span
         id="cursor"
         class="animate-blink">|</span
-      >Trainee
+      >
     </h1>
     <p class="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
-      Hola, soy Daniel, un estudiante de ING. Civil Informática,
-      apasionado por la informática y la creación de productos eficientes.
-      Soy un Trainee que está constantemente adquiriendo
-      conocimientos en el mundo de la programación, buscando mejorar mis
-      habilidades día a día. Me interesa especialmente el desarrollo backend,
-      configuración de servidores VPS (sysadmin) y la seguridad informática.
+      Hola, soy estudiante de Ingeniería Civil Informática y me apasiona el mundo de la tecnología, la infraestructura y los servidores.
+      Me interesa especialmente el área de cloud, la administración de servidores VPS y entornos Linux, junto con la seguridad informática y el aprendizaje constante.
+      Disfruto crear, configurar y optimizar sistemas, buscando siempre mejorar mis habilidades y adquirir nuevos conocimientos dentro del mundo IT.
     </p>
     <!-- Social Media Component + CV Button -->
     <div class="flex flex-wrap gap-4 justify-center lg:justify-start items-center">
@@ -73,7 +70,7 @@ import { technologies } from "../const/worksInformation.js";
 
 <script>
   import { startTypingEffect } from "../scripts/typingEffect";
-  const aboutTitleWords = ["Backend Dev", "Sysadmin"];
+  const aboutTitleWords = ["Developer 💻", "Cloud Manager ☁️"];
   startTypingEffect(aboutTitleWords);
 </script>
 
