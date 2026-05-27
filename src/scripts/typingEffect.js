@@ -21,8 +21,9 @@ export function startTypingEffect(words, elementId = "dynamic-word", options = {
   }
 
   function type() {
-    if (currentCharIndex < words[currentWordIndex].length) {
-      el.textContent += words[currentWordIndex].charAt(currentCharIndex);
+    const chars = [...words[currentWordIndex]];
+    if (currentCharIndex < chars.length) {
+      el.textContent += chars[currentCharIndex];
       currentCharIndex++;
       setTimeout(type, typingSpeed);
     } else {
@@ -31,8 +32,9 @@ export function startTypingEffect(words, elementId = "dynamic-word", options = {
   }
 
   function erase() {
+    const chars = [...words[currentWordIndex]];
     if (currentCharIndex > 0) {
-      el.textContent = words[currentWordIndex].substring(0, currentCharIndex - 1);
+      el.textContent = chars.slice(0, currentCharIndex - 1).join('');
       currentCharIndex--;
       setTimeout(erase, erasingSpeed);
     } else {
