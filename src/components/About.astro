@@ -10,11 +10,11 @@ import { technologies } from "../const/worksInformation.js";
 
 <section
   id="about"
-  class="flex flex-col lg:flex-row items-center lg:gap-16 gap-8 py-8 lg:py-16 px-4 sm:px-6 lg:px-24"
+  class="flex flex-col lg:flex-row items-center lg:gap-8 gap-6 py-8 lg:py-16 px-4 sm:px-6 lg:px-24"
 >
   <!-- IMG TOP/RIGHT -->
   <div
-    class="w-32 h-32 sm:w-40 sm:h-40 lg:w-64 lg:h-64 rounded-full overflow-hidden relative shadow-lg order-1 lg:order-2 flex-shrink-0"
+    class="w-32 h-32 sm:w-40 sm:h-40 lg:w-64 lg:h-64 rounded-full overflow-hidden relative shadow-lg order-1 lg:order-2 flex-shrink-0 lg:ml-auto"
   >
     <img
       src={PERSONAL_INFO.profileImage}
@@ -29,7 +29,7 @@ import { technologies } from "../const/worksInformation.js";
 
   <!-- Text BOTTOM/LEFT -->
   <div class="flex-1 max-w-2xl text-center lg:text-left order-2 lg:order-1">
-    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight lg:whitespace-nowrap">
       ¡Hola, soy Daniel! Soy un
       <span id="dynamic-word" class="text-blue-600"></span><span
         id="cursor"
