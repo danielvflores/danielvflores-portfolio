@@ -1,40 +1,40 @@
 export const technologies = [
-  {
-    title: "Java",
-    description: "Experiencia sólida en desarrollo Java junto con Maven para la gestión de dependencias. Dominio de programación orientada a objetos, desarrollo de APIs seguras e integración con Spring Framework.",
-    imageUrl: "/icons/java-icon.png",
-    imageAlt: "Logo de Java"
-  },
-  {
-    title: "TypeScript",
-    description: "Experiencia en TypeScript para desarrollo de aplicaciones web. Implementación de tipado estático estricto, interfaces bien planificadas y un enfoque en la calidad del código.",
-    imageUrl: "/icons/ts-icon.png",
-    imageAlt: "Logo de TypeScript"
-  },
-  {
-    title: "NodeJS",
-    description: "Conocimientos versátiles en NodeJS tanto para desarrollo backend como desarrollo frontend. Experiencia creando APIS RESTful, microservicios y bots de Discord.",
-    imageUrl: "/icons/nodejs-icon.png",
-    imageAlt: "Logo de NodeJS"
-  },
-  {
-    title: "Bases de Datos",
-    description: "Experiencia con gestores de bases de datos, tanto relacionales como no relacionales. Entre ellas se encuentran PostgreSQL, SQLite y MongoDB.",
-    imageUrl: "/icons/mongodb-icon.png",
-    imageAlt: "Logo de Database"
-  },
-  {
-    title: "Herramientas Sysadmin",
-    description: "Administración de sistemas en entornos Linux. Experiencia con Docker, gestión de firewall (ufw), segmentación de redes y control de usuarios. Desarrollo de scripts para monitoreo de usuarios y procesos.",
-    imageUrl: "/icons/server-icon.png",
-    imageAlt: "Logo de Herramientas Sysadmin"
-  },
-  {
-    title: "Herramientas Ciberseguridad",
-    description: "Experiencia en herramientas de ciberseguridad para pentesting, utilizando Nmap, OWASP ZAP y sqlmap.",
-    imageUrl: "/icons/security-icon.png",
-    imageAlt: "Logo de Herramientas Ciberseguridad"
-  }
+{
+title: "Java",
+description: "Experiencia sólida en desarrollo Java junto con Maven para la gestión de dependencias. Dominio de programación orientada a objetos, desarrollo de APIs e integración con Spring Framework.",
+imageUrl: "/icons/java-icon.png",
+imageAlt: "Logo de Java"
+},
+{
+title: "TypeScript",
+description: "Experiencia en TypeScript para desarrollo de aplicaciones web. Implementación de tipado estático, interfaces bien estructuradas y enfoque en la calidad y mantenibilidad del código.",
+imageUrl: "/icons/ts-icon.png",
+imageAlt: "Logo de TypeScript"
+},
+{
+title: "NodeJS",
+description: "Experiencia utilizando NodeJS para desarrollo de aplicaciones y automatización de tareas. Creación de APIs REST, bots de Discord y herramientas orientadas a entornos backend.",
+imageUrl: "/icons/nodejs-icon.png",
+imageAlt: "Logo de NodeJS"
+},
+{
+title: "Python & Automation",
+description: "Uso de Python para scripting, automatización y herramientas orientadas a administración de sistemas y análisis de redes. Experiencia trabajando con threading, subprocess y automatización de tareas.",
+imageUrl: "/icons/py-icon.png",
+imageAlt: "Logo de Python"
+},
+{
+title: "Linux & VPS",
+description: "Experiencia administrando servidores Linux y entornos VPS. Configuración de servicios, manejo de usuarios, firewall con UFW, procesos, despliegue de aplicaciones y administración básica de infraestructura.",
+imageUrl: "/icons/server-icon.png",
+imageAlt: "Logo de Linux VPS"
+},
+{
+title: "Cloud & Infrastructure",
+description: "Experiencia desplegando y manteniendo proyectos en servidores cloud y entornos self-hosted. Uso de Docker, configuración de dominios, reverse proxies y gestión de servicios para aplicaciones web.",
+imageUrl: "/icons/cloud-icon.png",
+imageAlt: "Logo de Cloud Infrastructure"
+}
 ];
 
 export const projects = [
