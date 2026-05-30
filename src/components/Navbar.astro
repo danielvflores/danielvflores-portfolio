@@ -80,9 +80,23 @@ const links = [
       menuButton.setAttribute('aria-expanded', String(isOpen));
     });
 
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+    let lastScrolled = false;
+
+    function updateNavbarState() {
       if (!navbar) return;
-      navbar.classList.toggle('is-scrolled', window.scrollY > 16);
+      const isScrolled = window.scrollY > 16;
+      if (isScrolled !== lastScrolled) {
+        navbar.classList.toggle('is-scrolled', isScrolled);
+        lastScrolled = isScrolled;
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateNavbarState);
     }, { passive: true });
 
     window.addEventListener('keydown', (event) => {

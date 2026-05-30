@@ -17,17 +17,16 @@ import { SITE } from "../const/config";
     <div class="hero-grid">
       <div class="hero-copy hero-copy-offset">
         <span class="hero-eyebrow fade-in-up" style="animation-delay: 0ms">
-          Disponible para aprender, construir y colaborar
+          Backend, Linux y Cloud
         </span>
 
         <h1 class="hero-title fade-in-up" style="animation-delay: 90ms">
-          Desarrollo y Cloud para hacer 
-          <span>realidad tu proyecto.</span>
+          Backend y Cloud para construir
+          <span>proyectos escalables.</span>
         </h1>
 
         <p class="hero-description fade-in-up" style="animation-delay: 180ms">
-          Desarrollador enfocado en backend, Linux y servicios en la nube. Me apasiona aprender,
-          optimizar sistemas y ampliar constantemente mis conocimientos.
+          Desarrollo aplicaciones backend, administro servicios Linux y despliego proyectos reales en la nube, cuidando recursos, seguridad y estabilidad.
         </p>
 
         <div class="hero-actions fade-in-up" style="animation-delay: 270ms">
@@ -37,8 +36,8 @@ import { SITE } from "../const/config";
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a href="/about" data-scroll-target="about" class="btn-ubuntu-secondary group">
-            Sobre mí
+          <a href="/contact" data-scroll-target="contact" class="btn-ubuntu-secondary group">
+            Contactar
           </a>
         </div>
 
@@ -79,8 +78,8 @@ import { SITE } from "../const/config";
                 <path d="M9 15h6" />
               </svg>
             </span>
-            <strong>100%</strong>
-            <small>Aprendizaje continuo</small>
+            <strong>Linux</strong>
+            <small>Servidores y despliegues</small>
           </div>
         </div>
       </div>
@@ -92,7 +91,7 @@ import { SITE } from "../const/config";
         <div class="hero-card-body">
           <p class="terminal-line"><span>$</span> whoami</p>
           <h2>Daniel Flores</h2>
-          <p class="hero-role">Desarrollador & Cloud Manager</p>
+          <p class="hero-role">Backend Developer · Linux · Cloud</p>
 
           <div class="terminal-block">
             <h3>&gt; Experiencia</h3>
@@ -101,7 +100,7 @@ import { SITE } from "../const/config";
               <li>2 VPS administradas</li>
               <li>Experiencia con Docker y servicios Linux</li>
               <li>Desarrollo backend con Java y TypeScript</li>
-              <li>Enfocado en aprender y mejorar continuamente</li>
+              <li>Rendimiento, seguridad básica y mejora continua</li>
             </ul>
           </div>
 
@@ -156,7 +155,7 @@ import { SITE } from "../const/config";
       revealItems.forEach((item, index) => {
         item.classList.add('reveal-item');
         item.style.animation = 'none';
-        item.style.setProperty('--reveal-delay', `${Math.min(index * 55, 330)}ms`);
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 35, 210)}ms`);
 
         if (item.classList.contains('slide-in-left')) item.classList.add('reveal-left');
         if (item.classList.contains('slide-in-right')) item.classList.add('reveal-right');
@@ -179,7 +178,7 @@ import { SITE } from "../const/config";
             section.querySelectorAll<HTMLElement>('.reveal-item').forEach(item => {
               item.classList.add('reveal-done');
             });
-          }, 800);
+          }, 520);
         });
       }, {
         threshold: 0.12,
