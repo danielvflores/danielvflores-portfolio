@@ -12,7 +12,6 @@ export const SITE = {
   locale: "es_ES",
 };
 
-export const BASE_URL = "/";
 
 export const PERSONAL_INFO = {
   name: "Daniel Alonso Flores Viera",

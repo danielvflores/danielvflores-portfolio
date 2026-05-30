@@ -1,77 +1,60 @@
 ---
 import Social from "./Social.astro";
 import CVButton from "./CVButton.astro";
-import LenguageCard from "./LenguageCard.astro";
-import "../styles/cursorAnimation.css";
-
 import { PERSONAL_INFO } from "../const/config";
-import { technologies } from "../const/worksInformation.js";
 ---
 
-<section
-  id="about"
-  class="flex flex-col lg:flex-row items-center lg:gap-8 gap-6 py-8 lg:py-16 px-4 sm:px-6 lg:px-24"
->
-  <!-- IMG TOP/RIGHT -->
-  <div
-    class="w-32 h-32 sm:w-40 sm:h-40 lg:w-64 lg:h-64 rounded-full overflow-hidden relative shadow-lg order-1 lg:order-2 flex-shrink-0 lg:ml-auto"
-  >
-    <img
-      src={PERSONAL_INFO.profileImage}
-      alt={`Foto de perfil de ${PERSONAL_INFO.name}`}
-      class="w-full h-full object-cover object-center no-select"
-      width="256"
-      height="256"
-      loading="eager"
-    />
-    <div class="absolute inset-0 z-10 select-none pointer-events-auto" style="background: transparent;"></div>
+<section class="content-section about-section">
+  <div class="section-heading fade-in-up">
+    <span class="section-kicker">Sobre mí</span>
   </div>
 
-  <!-- Text BOTTOM/LEFT -->
-  <div class="flex-1 max-w-2xl text-center lg:text-left order-2 lg:order-1">
-    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight lg:whitespace-nowrap">
-      ¡Hola, soy Daniel! Soy un
-      <span id="dynamic-word" class="text-blue-600"></span><span
-        id="cursor"
-        class="animate-blink">|</span
-      >
-    </h1>
-    <p class="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
-      Hola, soy estudiante de Ingeniería Civil Informática y me apasiona el mundo de la tecnología, la infraestructura y los servidores.
-      Me interesa especialmente el área de cloud, la administración de servidores VPS y entornos Linux, junto con la seguridad informática y el aprendizaje constante.
-      Disfruto crear, configurar y optimizar sistemas, buscando siempre mejorar mis habilidades y adquirir nuevos conocimientos dentro del mundo IT.
-    </p>
-    <!-- Social Media Component + CV Button -->
-    <div class="flex flex-wrap gap-4 justify-center lg:justify-start items-center">
-      <Social />
-      <CVButton />
+  <div class="about-grid">
+    <div class="section-card about-photo-card fade-in-up">
+      <img
+        src={PERSONAL_INFO.profileImage}
+        alt={`Foto de perfil de ${PERSONAL_INFO.name}`}
+        width="320"
+        height="320"
+        loading="lazy"
+      />
+      <div>
+        <h3>{PERSONAL_INFO.name}</h3>
+        <p>Estudiante de 4<sup class="custom-sup">to</sup> año en  Ingeniería Civil Informática, enfocado en backend, servidores y proyectos funcionales.</p>
+      </div>
+    </div>
+
+    <div class="about-content fade-in-up" style="animation-delay: 120ms">
+      <p>
+        Aprendo construyendo. Levanto servicios, configuro servidores, automatizo tareas y pruebo implementaciones en entornos controlados para entender cómo funcionan,
+        optimizarlas y mantenerlas de forma confiable.      </p>
+      <p>
+        Actualmente estoy orientando mi perfil hacia desarrollo backend, administración de VPS,
+        despliegues, Docker, CI/CD, Linux y buenas prácticas para mantener sistemas simples, seguros y mantenibles.
+      </p>
+
+      <div class="about-values">
+        <div class="section-card">
+          <strong>01</strong>
+          <h3>De la teoría a la práctica</h3>
+          <p>Construyo proyectos que puedan desplegarse, probarse y mejorarse en entornos reales.</p>
+        </div>
+        <div class="section-card">
+          <strong>02</strong>
+          <h3>Infraestructura y despliegues</h3>
+          <p>Trabajo con VPS, Linux, Docker y automatización para desplegar y mantener aplicaciones en entornos reales.</p>
+        </div>
+        <div class="section-card">
+          <strong>03</strong>
+          <h3>Mejora continua</h3>
+          <p>Cada proyecto es una oportunidad para escribir mejor código, optimizar procesos y aprender algo nuevo.</p>
+        </div>
+      </div>
+
+      <div class="about-actions">
+        <Social />
+        <CVButton />
+      </div>
     </div>
   </div>
 </section>
-
-<section id="lenguages" class="px-4 sm:px-6 lg:px-24 py-8">
-  <h3 class="text-2xl font-bold text-center mb-8">
-    Tecnologías y Herramientas
-  </h3>
-
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto"
-  >
-    {technologies.map(tech => (
-      <LenguageCard
-        title={tech.title}
-        description={tech.description}
-        imageUrl={tech.imageUrl}
-        imageAlt={tech.imageAlt}
-      />
-    ))}
-  </div>
-</section>
-
-<script>
-  import { startTypingEffect } from "../scripts/typingEffect";
-  const aboutTitleWords = ["Developer 💻", "Cloud Manager ☁️"];
-  startTypingEffect(aboutTitleWords);
-</script>
-
-

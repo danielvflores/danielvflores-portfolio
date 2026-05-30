@@ -4,77 +4,55 @@ import { projects } from "../const/worksInformation.js";
 import { SOCIAL_LINKS } from "../const/config";
 ---
 
-<section id="projects" class="py-8 lg:py-16 px-4 sm:px-6 lg:px-24">
-  <!-- Profile Github -->
-  <div class="flex flex-col items-center gap-6 mb-12 text-center">
-    <img
-      src="https://github.com/danielvflores.png"
-      alt="Foto de GitHub"
-      class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-lg"
-    />
-    <div class="max-w-2xl">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3">
-        Estás en el apartado de mis proyectos! 👋
-      </h2>
-      <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-        Administrador de servidores VPS y desarrollador backend enfocado en Java, TypeScript y NodeJS. Mi
-        enfoque está en crear proyectos eficientes y seguros. Como
-        Trainee en constante crecimiento, cada proyecto es una oportunidad para
-        aplicar mejores prácticas y arquitecturas sólidas que voy aprendiendo
-        con el tiempo.
-      </p>
-      <a
-        href={SOCIAL_LINKS.github}
-        class="text-blue-600 hover:underline text-sm sm:text-base inline-block"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ver perfil completo en GitHub →
-      </a>
+<section class="content-section projects-section">
+  <div class="section-heading fade-in-up">
+    <span class="section-kicker">Proyectos</span>
+    <h2>Proyectos en los que he trabajado.</h2>
+    <p>
+      Estos proyectos son los principales en los que he trabajado siendo proyectos personales o colaborativos.
+      Estos proyectos reflejan parte de mi perfil técnico y de mi forma de trabajar, enfocada en backend, infraestructura y despliegues.
+    </p>
+    <a
+      href={SOCIAL_LINKS.github}
+      class="section-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver perfil completo en GitHub →
+    </a>
+  </div>
+
+  <div class="project-summary fade-in-up" style="animation-delay: 100ms">
+    <div>
+      <strong>{projects.length}</strong>
+      <span>Proyectos destacados</span>
+    </div>
+    <div>
+      <strong>Backend</strong>
+      <span>APIs, plugins y lógica</span>
+    </div>
+    <div>
+      <strong>Cloud</strong>
+      <span>Deploy, VPS y servicios</span>
     </div>
   </div>
 
-  <!-- Stats Section -->
-  <div class="max-w-4xl mx-auto mb-12">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
-      <div class="px-2 py-1">
-        <div class="text-2xl font-semibold text-gray-900">{projects.length}</div>
-        <div class="text-sm text-gray-500">Proyectos</div>
-      </div>
-      <div class="px-2 py-1">
-        <div class="text-2xl font-semibold text-gray-900">8+</div>
-        <div class="text-sm text-gray-500">Tecnologías</div>
-      </div>
-      <div class="px-2 py-1">
-        <div class="text-2xl font-semibold text-gray-900">100%</div>
-        <div class="text-sm text-gray-500">Open Source</div>
-      </div>
-      <div class="px-2 py-1">
-        <div class="text-2xl font-semibold text-gray-900">2 años</div>
-        <div class="text-sm text-gray-500">Experiencia</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Projects Grid -->
-  <!--
-    Functions not used:
-    - featured={project.featured}
-   -->
   <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 2xl:grid-cols-3 max-w-6xl mx-auto items-stretch">
-    {projects.map(project => (
-      <ProjectCard
-        title={project.title}
-        description={project.description}
-        techs={project.techs}
-        repoUrl={project.repoUrl}
-        demoUrl={project.demoUrl}
-        status={project.status}
-        type={project.type}
-        icon={project.icon}
-        gradient={"gradient" in project ? project.gradient : ""}
-        year={project.year}
-      />
+    {projects.map((project, idx) => (
+      <div class="fade-in-up" style={`animation-delay: ${idx * 80}ms`}>
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          techs={project.techs}
+          repoUrl={project.repoUrl}
+          demoUrl={project.demoUrl}
+          status={project.status}
+          type={project.type}
+          icon={project.icon}
+          gradient={"gradient" in project ? project.gradient : ""}
+          year={project.year}
+        />
+      </div>
     ))}
   </div>
 </section>
