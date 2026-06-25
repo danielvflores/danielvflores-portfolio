@@ -144,7 +144,6 @@ import { SITE } from "../const/config";
   </section>
 
   <script>
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const sections = document.querySelectorAll<HTMLElement>('[data-scroll-section]');
 
     sections.forEach(section => {
@@ -163,30 +162,34 @@ import { SITE } from "../const/config";
       });
     });
 
-    if (prefersReducedMotion) {
-      sections.forEach(section => section.classList.add('is-visible'));
-    } else {
-      const observer = new IntersectionObserver((entries, activeObserver) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-
-          const section = entry.target as HTMLElement;
+    function revealSection(section: HTMLElement) {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
           section.classList.add('is-visible');
-          activeObserver.unobserve(section);
-
-          window.setTimeout(() => {
-            section.querySelectorAll<HTMLElement>('.reveal-item').forEach(item => {
-              item.classList.add('reveal-done');
-            });
-          }, 520);
         });
-      }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -8% 0px'
       });
 
-      sections.forEach(section => observer.observe(section));
+      window.setTimeout(() => {
+        section.querySelectorAll<HTMLElement>('.reveal-item').forEach(item => {
+          item.classList.add('reveal-done');
+        });
+      }, 760);
     }
+
+    const observer = new IntersectionObserver((entries, activeObserver) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const section = entry.target as HTMLElement;
+        activeObserver.unobserve(section);
+        revealSection(section);
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -8% 0px'
+    });
+
+    sections.forEach(section => observer.observe(section));
 
     const routeMap: Record<string, string> = {
       '/': 'hero',

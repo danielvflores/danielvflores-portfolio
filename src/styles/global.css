@@ -541,13 +541,6 @@ select:focus {
     contain-intrinsic-size: auto;
   }
 
-  .reveal-item {
-    opacity: 1;
-    transform: none;
-    transition:
-      opacity 320ms ease-out,
-      transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
 }
 
 /* ===== Clean hero section ===== */
