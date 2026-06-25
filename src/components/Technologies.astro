@@ -1,0 +1,24 @@
+---
+import LenguageCard from "./LenguageCard.astro";
+import { technologies } from "../const/worksInformation.js";
+---
+
+<section class="content-section technologies-section">
+  <div class="section-heading fade-in-up">
+    <span class="section-kicker">Tecnologías</span>
+    <h2>Herramientas que uso en mi día a día.</h2>
+  </div>
+
+  <div class="tech-grid">
+    {technologies.map((tech, idx) => (
+      <div class="fade-in-up" style={`animation-delay: ${idx * 80}ms`}>
+        <LenguageCard
+          title={tech.title}
+          description={tech.description}
+          imageUrl={tech.imageUrl}
+          imageAlt={tech.imageAlt}
+        />
+      </div>
+    ))}
+  </div>
+</section>

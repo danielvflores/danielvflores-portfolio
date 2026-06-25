@@ -1,0 +1,251 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import About from "./About.astro";
+import Technologies from "./Technologies.astro";
+import Projects from "./Projects.astro";
+import Contact from "./Contact.astro";
+import { SITE } from "../const/config";
+---
+
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  keywords={SITE.keywords}
+  showScrollToTop={true}
+>
+  <section id="hero" class="hero-section scroll-mt-28">
+    <div class="hero-grid">
+      <div class="hero-copy hero-copy-offset">
+        <span class="hero-eyebrow fade-in-up" style="animation-delay: 0ms">
+          Backend, Linux y Cloud
+        </span>
+
+        <h1 class="hero-title fade-in-up" style="animation-delay: 90ms">
+          Backend y Cloud para construir
+          <span>proyectos escalables.</span>
+        </h1>
+
+        <p class="hero-description fade-in-up" style="animation-delay: 180ms">
+          Desarrollo aplicaciones backend, administro servicios Linux y despliego proyectos reales en la nube, cuidando recursos, seguridad y estabilidad.
+        </p>
+
+        <div class="hero-actions fade-in-up" style="animation-delay: 270ms">
+          <a href="/projects" data-scroll-target="projects" class="btn-ubuntu-primary group">
+            Ver proyectos
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="/contact" data-scroll-target="contact" class="btn-ubuntu-secondary group">
+            Contactar
+          </a>
+        </div>
+
+        <div class="hero-stats fade-in-up" style="animation-delay: 360ms">
+          <div>
+            <span class="hero-stat-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32.031" height="32.006" viewBox="-0.016 -0.003 32.031 32.006" enable-background="new -0.016 -0.003 32.031 32.006"><path fill="#EFC75E" d="M9.627 22.319c1.495 1.489 1.945 3.938.451 5.428-1.495 1.489-6.001 3.148-7.496 1.659-1.494-1.489.172-5.979 1.666-7.468 1.495-1.489 3.885-1.109 5.379.381z"/><path fill="#E2574C" d="M23.432 19.008c2.251 4.667-3.242 15.53-5.782 12.456-1.03-1.246-.962-3.234-3.651-5.794-.004.016.979.174 2.13-.868 2.656-2.046 7.303-5.777 7.303-5.794z"/><path fill="#E2574C" d="M13.973 8.556c-5.045-2.286-16.73 3.171-13.4 5.738 1.35 1.041 3.492.984 6.267 3.699-.017.004-.192-.984.926-2.135 2.189-2.658 6.188-7.302 6.207-7.302z"/><path fill="#CF5349" d="M11.751 8.038l-.218-.011c-1.107 1.352-3.812 4.685-5.461 6.794-.676.734-.859 1.401-.898 1.795.323.222.656.478 1 .772.084-.398.305-.953.858-1.554 2.105-2.694 5.948-7.404 5.966-7.403-.377-.18-.801-.303-1.247-.393z"/><path fill="#CF5349" d="M23.463 19.082c-.658.554-4.828 3.973-7.306 5.924-.819.758-1.546.9-1.909.914.356.358.664.705.926 1.04.326.005 1.111-.098 1.997-.917 2.074-1.634 5.322-4.285 6.715-5.436-.075-.552-.213-1.067-.423-1.525z"/><path fill="#D7B354" d="M6.089 21.038c.208.932.847 2.043 1.842 3.036.99.988 2.097 1.624 3.028 1.836.158-1.252-.36-2.623-1.332-3.591-.967-.964-2.307-1.452-3.538-1.281z"/><path fill="#EBEBEB" d="M31.814.16c.752.711-.355 11.267-7.57 18.434-4.467 4.438-7.43 6.156-8.139 6.771-1.961.889-3.262 1.367-7.148-2.495-3.877-3.852-3.131-4.92-2.271-6.765.638-.716 2.405-3.691 6.873-8.13 7.212-7.166 17.468-8.513 18.255-7.815z"/><path fill="#324D5B" d="M22.795 9.163c1.555 1.558 1.555 4.084 0 5.643-1.556 1.558-4.077 1.558-5.633 0-1.555-1.559-1.555-4.085 0-5.643 1.556-1.559 4.077-1.559 5.633 0z"/><path fill="#CCD0D2" d="M21.4 10.577c.784.779.784 2.042 0 2.821-.783.779-2.055.779-2.84 0-.783-.779-.783-2.042 0-2.821.786-.779 2.057-.779 2.84 0z"/></svg>
+            </span>
+            <strong>3+</strong>
+            <small>Proyectos desplegados</small>
+          </div>
+          <div>
+            <span class="hero-stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="5" rx="1.4" />
+                <rect x="4" y="15" width="16" height="5" rx="1.4" />
+                <path d="M7 6.5h.01M7 17.5h.01M10 6.5h7M10 17.5h7M12 9v6" />
+              </svg>
+            </span>
+            <strong>2</strong>
+            <small>VPS administradas</small>
+          </div>
+          <div>
+            <span class="hero-stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 8-4 4 4 4" />
+                <path d="m16 8 4 4-4 4" />
+                <path d="m14 4-4 16" />
+              </svg>
+            </span>
+            <strong>8+</strong>
+            <small>Tecnologías utilizadas</small>
+          </div>
+          <div>
+            <span class="hero-stat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.5 18.5h10.2a4.3 4.3 0 0 0 .7-8.5 6 6 0 0 0-11.4 1.7 3.4 3.4 0 0 0 .5 6.8Z" />
+                <path d="M9 15h6" />
+              </svg>
+            </span>
+            <strong>Linux</strong>
+            <small>Servidores y despliegues</small>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card hero-card-offset hero-card-compact fade-in-up-scale" style="animation-delay: 420ms" aria-label="Resumen profesional">
+        <div class="hero-card-header">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="hero-card-body">
+          <p class="terminal-line"><span>$</span> whoami</p>
+          <h2>Daniel Flores</h2>
+          <p class="hero-role">Backend Developer · Linux · Cloud</p>
+
+          <div class="terminal-block">
+            <h3>&gt; Experiencia</h3>
+            <ul>
+              <li>3+ proyectos desplegados</li>
+              <li>2 VPS administradas</li>
+              <li>Experiencia con Docker y servicios Linux</li>
+              <li>Desarrollo backend con Java y TypeScript</li>
+              <li>Rendimiento, seguridad básica y mejora continua</li>
+            </ul>
+          </div>
+
+          <div class="terminal-block">
+            <h3>&gt; Stack principal</h3>
+            <div class="stack-pills">
+              <span>Java</span>
+              <span>TypeScript</span>
+              <span>NodeJS</span>
+              <span>Python</span>
+              <span>Linux</span>
+              <span>Docker</span>
+              <span>VPS</span>
+              <span>SQL</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <a href="/about" data-scroll-target="about" class="hero-scroll" aria-label="Bajar a la sección sobre mí">
+      <span></span>
+    </a>
+  </section>
+
+  <section id="about" class="page-section scroll-reveal" data-scroll-section>
+    <About />
+  </section>
+
+  <section id="technologies" class="page-section scroll-reveal" data-scroll-section>
+    <Technologies />
+  </section>
+
+  <section id="projects" class="page-section scroll-reveal" data-scroll-section>
+    <Projects />
+  </section>
+
+  <section id="contact" class="page-section scroll-reveal" data-scroll-section>
+    <Contact />
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll<HTMLElement>('[data-scroll-section]');
+
+    sections.forEach(section => {
+      const revealItems = section.querySelectorAll<HTMLElement>(
+        '.fade-in-up, .fade-in, .slide-in-left, .slide-in-right, .bounce-in, .card-ubuntu, .section-card'
+      );
+
+      revealItems.forEach((item, index) => {
+        item.classList.add('reveal-item');
+        item.style.animation = 'none';
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 35, 210)}ms`);
+
+        if (item.classList.contains('slide-in-left')) item.classList.add('reveal-left');
+        if (item.classList.contains('slide-in-right')) item.classList.add('reveal-right');
+        if (item.classList.contains('bounce-in')) item.classList.add('reveal-scale');
+      });
+    });
+
+    function revealSection(section: HTMLElement) {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          section.classList.add('is-visible');
+        });
+      });
+
+      window.setTimeout(() => {
+        section.querySelectorAll<HTMLElement>('.reveal-item').forEach(item => {
+          item.classList.add('reveal-done');
+        });
+      }, 760);
+    }
+
+    const observer = new IntersectionObserver((entries, activeObserver) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const section = entry.target as HTMLElement;
+        activeObserver.unobserve(section);
+        revealSection(section);
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -8% 0px'
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    const routeMap: Record<string, string> = {
+      '/': 'hero',
+      '/about': 'about',
+      '/tech': 'technologies',
+      '/projects': 'projects',
+      '/contact': 'contact'
+    };
+
+    function getNavbarOffset() {
+      const navbar = document.querySelector('.floating-navbar');
+      const height = navbar instanceof HTMLElement ? navbar.offsetHeight : 0;
+      return height + 24;
+    }
+
+    function scrollToPortfolioSection(targetId: string, route?: string, updateUrl = true) {
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - getNavbarOffset();
+      window.scrollTo({ top: Math.max(targetTop, 0), behavior: 'smooth' });
+
+      if (updateUrl && route && window.location.pathname !== route) {
+        history.pushState({}, '', route);
+      }
+    }
+
+    document.querySelectorAll<HTMLElement>('[data-scroll-target]').forEach(link => {
+      link.addEventListener('click', event => {
+        const targetId = link.getAttribute('data-scroll-target');
+        const href = link.getAttribute('href') || '/';
+        if (!targetId) return;
+
+        event.preventDefault();
+        scrollToPortfolioSection(targetId, href, true);
+
+        const menu = document.getElementById('mobile-menu');
+        const menuButton = document.getElementById('mobile-menu-button');
+        menu?.classList.remove('is-open');
+        menu?.setAttribute('aria-hidden', 'true');
+        menuButton?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      const targetId = routeMap[window.location.pathname] ?? 'hero';
+      scrollToPortfolioSection(targetId, window.location.pathname, false);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const targetId = routeMap[window.location.pathname];
+      if (!targetId || targetId === 'hero') return;
+
+      window.setTimeout(() => {
+        scrollToPortfolioSection(targetId, window.location.pathname, false);
+      }, 80);
+    });
+  </script>
+</BaseLayout>
