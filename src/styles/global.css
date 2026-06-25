@@ -434,9 +434,9 @@ select:focus {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: 360ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 320ms !important;
   }
 }
 
@@ -544,7 +544,9 @@ select:focus {
   .reveal-item {
     opacity: 1;
     transform: none;
-    transition: none;
+    transition:
+      opacity 320ms ease-out,
+      transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
